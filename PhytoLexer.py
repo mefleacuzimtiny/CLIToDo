@@ -34,7 +34,7 @@ KEYWORDS = {
     "prioritize": TokenKind.PRIORITIZE,
     "edit": TokenKind.EDIT,
     "move": TokenKind.MOVE,
-    "newvalue": TokenKind.NEWVALUE,
+    "to": TokenKind.NEWVALUE,
 }
 
 
@@ -113,7 +113,7 @@ class Lexer:
 
 
 if __name__=="__main__":
-    text = '/add 5'
+    text = '/edit 5 to:4'
     lexer = Lexer(text, "/")
     while True:
         token = lexer.lexToken()

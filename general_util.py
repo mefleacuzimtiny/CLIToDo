@@ -1,6 +1,7 @@
 import sys
 import os
 import random
+from pathlib import Path
 
 sys.path.append(os.path.join(r"F:\my useful books\z.useless\actual stuff PUT PROPER STUFF HERE\CLI_ToDo"))
 
@@ -27,7 +28,6 @@ def display(file):
 def prioritize(position, priority_lvl = 1):
     to_prioritize = readFile("Incompleted")[position-1][:-1] #[:-1] to remove newline
     add(to_prioritize, priority_lvl, "Priorities")
-
 
 #/edit 4 newvalue:"text"/5 Incompleted
 def edit(position, newval, file = "Incompleted"):
